@@ -1,0 +1,85 @@
+*{
+  box-sizing: border-box;
+}
+
+body {
+  background-color: aqua;
+}
+
+.link-container{
+  ul{
+    list-style: none;
+  }
+}
+
+.edit-page-header{
+  background-color: bisque;
+  width: 70%;
+  margin: 0 auto 10px;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.user-details{
+  .user-detail-table{
+    background-color: aliceblue;
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 100%;
+
+    tbody{
+      tr{
+        border: 1px solid black;
+          th{
+            padding: 10px;
+            alignment: left;
+          }
+      }
+    }
+  }
+}
+
+.table-row{
+  &:hover{
+    background-color: aquamarine;
+  }
+  td{
+    padding: 5px 10px;
+  }
+}
+
+.table-row-edit{
+  .row-container{
+    background-color: bisque;
+    list-style: none;
+    width: 70%;
+    margin: 0 auto;
+    border-radius: 5px;
+
+    li{
+      padding: 10px 0;
+      label{
+        display: inline-block;
+        width: 20%;
+      }
+      .user-input-field{
+        width: 75%;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: none;
+        border: none;
+      }
+
+      .save-Btn{
+        background: darksalmon;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 1px 1px #888888;
+        position: relative;
+        left: 745px;
+        outline: none;
+      }
+    }
+  }
+}
