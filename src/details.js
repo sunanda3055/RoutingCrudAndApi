@@ -7,7 +7,7 @@ const Detail = (props) => {
 
     let _userData = userData.map((_data) => {
         return(
-            <tr key={_data.id} className='table-row'>
+            <tr key={_data.id} className='table-row ttn'>
                 <td><strong>{_data.id}</strong></td>
                 <td>{_data.title}</td>
                 <td>{_data.body}</td>
