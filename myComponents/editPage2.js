@@ -1,4 +1,4 @@
-import React, {Fragment} from "react";
+import React from "react";
 import { Route, Link, withRouter } from "react-router-dom";
 
 const Topic = ({match, userData,onInputChange,handleOnSave}) => {
@@ -25,10 +25,14 @@ const Topic = ({match, userData,onInputChange,handleOnSave}) => {
                         </li>
 
                         <li>
-                            <label>Body : </label><input type='text' name='body' value={_dataEdit.body}
-                                                         onChange={(e) => {
-                                                             onInputChange(e, _dataEdit.id)
-                                                         }} className='user-input-field'/>
+                            <label>Body : </label>
+                            <input
+                                type='text'
+                                name='body'
+                                value={_dataEdit.body}
+                                onChange={(e) => { onInputChange(e, _dataEdit.id) }}
+                                className='user-input-field'
+                            />
                         </li>
 
                         <li>

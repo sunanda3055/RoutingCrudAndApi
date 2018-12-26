@@ -3,8 +3,8 @@ import Axios from 'axios';
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import HomePage from "./home";
 import EditPage from "./editPage";
-import EditPage2 from "./../myComponents/editPage2";
-import '../assets/scss/style.scss'
+//import EditPage2 from "./../myComponents/editPage2";
+//import '../assets/scss/style.scss'
 
 class Home extends React.Component{
 
@@ -44,7 +44,7 @@ class Home extends React.Component{
     }
 
     userDetailHandleEdit = (id) => {
-        let { userData } = this.state;
+        const { userData } = this.state;
         const currentUser = userData.filter((info) => {
             return info['id'] === id;
         });
@@ -63,15 +63,15 @@ class Home extends React.Component{
             }
             return info;
         });
-        let updatedUser = [...temp];
+        const updatedUser = [...temp];
         this.setState({userData: updatedUser});
     }
 
     handleOnSave = () => {}
 
     render(){
-        let { userDetail,userData } = this.state;
-        //console.log('this.props****',this);
+        const { userDetail,userData } = this.state;
+
         return(
             <Router>
                 <div className='link-container'>
@@ -79,9 +79,9 @@ class Home extends React.Component{
                         <li>
                             <Link to="/">Home</Link>
                         </li>
-                        <li>
-                            <Link to="/edit2">Edit2</Link>
-                        </li>
+                        {/*<li>*/}
+                            {/*<Link to="/edit2">Edit2</Link>*/}
+                        {/*</li>*/}
                     </ul>
 
                     <hr />
@@ -108,21 +108,17 @@ class Home extends React.Component{
                         )}
                         />
 
-                        <Route exact = { true } path="/edit2" render = {({ match }) => (
-                            <EditPage2
-                                match = { match }
-                                userData = { userData }
-                                onInputChange = { this.onInputChange }
-                                handleOnSave = { this.handleOnSave }
-                            />
-                        )}
-                        />
-
+                        {/*<Route exact = { true } path="/edit2" render = {({ match }) => (*/}
+                            {/*<EditPage2*/}
+                                {/*match = { match }*/}
+                                {/*userData = { userData }*/}
+                                {/*onInputChange = { this.onInputChange }*/}
+                                {/*handleOnSave = { this.handleOnSave }*/}
+                            {/*/>*/}
+                        {/*)}*/}
+                        {/*/>*/}
                     </Switch>
 
-
-
-                    {/*<Route exact={true} path="/editPost/:id" component={EditPage} />*/}
                 </div>
             </Router>
         )

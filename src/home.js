@@ -1,11 +1,11 @@
 import React from "react";
-import '../assets/scss/style.scss'
+//import '../assets/scss/style.scss'
 import Detail from "./details";
 
 class HomePage extends React.Component{
 
     render(){
-        let { userData,onDeleteDataBtn } = this.props;
+        const { userData,onDeleteDataBtn } = this.props;
 
         return(
             <div className='user-details'>
@@ -22,7 +22,6 @@ class HomePage extends React.Component{
                         <Detail
                             userData = { userData }
                             onDeleteDataBtn = { onDeleteDataBtn }
-                            // userDetailHandleEdit = { userDetailHandleEdit }
                         />
                         </tbody>
                     </table>
